@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class bintodec {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(bintodeci(n));
+    }
+    public static int bintodeci(int n)
+    {
+        int sum=0,pow=0;
+        while(n>0)
+        {
+            int r=n%10;
+            sum=(int)(sum+r*(Math.pow(2,pow)));
+            n=n/10;
+            pow++;
+        }
+        return sum;
+    }
+}
